@@ -30,6 +30,7 @@ int main(int argc, char *argv[]) {
 
 	int hours = myTime.getHour(), mins = myTime.getMin();									// get changed time
 	cout << "CM3 starts at " << myTime.getHour() << ":" << myTime.getMin() << endl;
-	cout << "Design 1 starts at " << mins << " past " << hours;   // display time in another format
+	cout << "Design 1 starts at " << mins << " past " << hours <<endl;   // display time in another format
+	cout << myTime;
 
 };

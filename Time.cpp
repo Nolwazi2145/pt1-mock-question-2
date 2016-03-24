@@ -1,5 +1,4 @@
 #include "Time.h"
-#include <iostream>
 using namespace std;
 
 
@@ -12,12 +11,12 @@ Time::Time(int h= 0, int m = 0)
 Time::~Time()
 {
 }
-int Time::getMin()
+int Time::getMin() const
 {
 	return mins;
 }
 
-int Time::getHour()
+int Time::getHour() const
 {
 	return hour;
 }
@@ -30,4 +29,9 @@ void Time::SetTime(int hr, int min)
  void Time::printTime()
 {
 	std::cout << "hours" << ":" << "minute" << endl;
-};
+}
+ std::ostream& operator<<(std::ostream & out, const Time& time)
+ {
+	 out << time.getHour() << ":" << time.getMin();
+	 return out;
+ }
