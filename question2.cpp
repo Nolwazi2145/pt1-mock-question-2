@@ -5,7 +5,7 @@
 // Date: 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
-
+#include "Time.h"
 using namespace std;
 
 // ***** QUESTION 2 *****
@@ -23,12 +23,13 @@ int main(int argc, char *argv[]) {
 
 	Time myTime(8, 40);									// instantiate time class 
 
-	cout << "CM3 starts at " << myTime << endl;			// demonstrate overloaded stream insertion operator
+	//cout << "CM3 starts at " << myTime << endl;			// demonstrate overloaded stream insertion operator
+	cout << "CM3 starts at " << myTime.getHour() << ":" << myTime.getMin()<<endl;
 
-	myTime.set(10, 30);									// change the time
+	myTime.SetTime(10, 30);									// change the time
 
-	int hours, mins;									// get changed time
-	myTime.get(hours, mins);
+	int hours = myTime.getHour(), mins = myTime.getMin();									// get changed time
+	cout << "CM3 starts at " << myTime.getHour() << ":" << myTime.getMin() << endl;
 	cout << "Design 1 starts at " << mins << " past " << hours;   // display time in another format
 
-}
+};
